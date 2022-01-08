@@ -2,7 +2,13 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
- 
+import json
+
+with open('config.json') as f:
+    token = json.load(f)
+type(token)
+print(token.keys())
+
 bot = commands.Bot(command_prefix='$')
  
 @bot.event
@@ -27,4 +33,4 @@ async def on_message(message):
    
  
  
-bot.run("ODkxMjM4MjMxMTIxNzUyMTE1.YU7cSA.K1Uj1R7zADP3WR4fRHIdbLwZnlI")
+bot.run(token.get("token"))
