@@ -23,7 +23,9 @@ bot = commands.Bot(command_prefix='$')
 @bot.event
 async def on_ready():
     print ("I am alive")
-    print ()
+# Setting `Watching ` status
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="cringe memes"))
+    print ("cringe memísky jsou super")
 
 @bot.event
 async def on_message(message):
@@ -49,6 +51,10 @@ async def on_message(message):
         channel = bot.get_channel(message.channel.id)
         await message.add_reaction("Pepenoweeb:892154131228278846")
         #await channel.message.send("Pepenoweeb:892154131228278846")
+
+    if 'CAN SOMEBODY TELL ME THE WAY OF ANDRISE' in message.content:
+        print(time, 'proboha už zase!')
+        await message.add_reaction(":emoji_50:913417410013458442")
 
     if 'https://tenor.com/view/bye-felicia-hi-hello-bye-gif-14084675' in message.content:
         print(time, ' Dobrou noc')
