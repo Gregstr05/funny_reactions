@@ -53,12 +53,23 @@ async def on_message(message):
         #await channel.message.send("Pepenoweeb:892154131228278846")
 
     if 'CAN SOMEBODY TELL ME THE WAY OF ANDRISE' in message.content:
+        channel = bot.get_channel(message.channel.id)
         print(time, 'proboha už zase!')
         await message.add_reaction(":emoji_50:913417410013458442")
+        await channel.send("https://tenor.com/view/not-funny-didnt-laugh-not-funny-didnt-laugh-dancing-money-dance-gif-14496446")
 
     if 'https://tenor.com/view/bye-felicia-hi-hello-bye-gif-14084675' in message.content:
         print(time, ' Dobrou noc')
         await message.add_reaction("agrLove:917046239202246656")
+
+    if message.author.name == 'MEE6':
+        print(time, ' mee6 šmejd')
+        #await message.add_reaction('monkaStab:886319312187555911')
+        if 'GG' in message.content:
+            await message.reply("https://tenor.com/view/gun-db-shotgun-gif-21597283")
+        elif 'Student/ka' in message.content:
+            await message.reply("https://tenor.com/view/gun-db-shotgun-gif-21597283")
+
    
  
  
